@@ -15,15 +15,14 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>NearDrop uses local networking to discover and connect with nearby devices for secure messaging</string>
+	<string>NearDrop needs local network access to receive files from Android devices via Nearby Share.</string>
 	<key>NSBonjourServices</key>
 	<array>
-		<string>_neardrop._tcp</string>
-		<string>_neardrop._udp</string>
+		<string>_FC9F5ED42C8A._tcp</string>
 	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
 </dict>
 </plist>

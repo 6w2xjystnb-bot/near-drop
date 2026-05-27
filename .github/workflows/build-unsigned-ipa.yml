@@ -26,6 +26,10 @@ jobs:
           xcodebuild -showsdks
           xcodebuild -list -project "${{ env.PROJECT_PATH }}"
 
+      - name: Resolve Swift Package Dependencies
+        run: |
+          xcodebuild -resolvePackageDependencies -project "${{ env.PROJECT_PATH }}" -scheme "${{ env.SCHEME }}"
+
       - name: Build for iOS (no code signing)
         run: |
           xcodebuild clean build \

@@ -1,4 +1,4 @@
-﻿// !$*UTF8*$!
+// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -7,163 +7,138 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21A3C2942E937E2000916E3B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A3C2932E937E2000916E3B /* Theme.swift */; };
-		AA0001 /* NearDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0001 /* NearDropApp.swift */; };
-		AA0002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0002 /* ContentView.swift */; };
-		AA0003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0003 /* Assets.xcassets */; };
-		AA0004 /* CryptoKitWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0004 /* CryptoKitWrapper.swift */; };
-		AA0005 /* PeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0005 /* PeerService.swift */; };
-		AA0006 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0006 /* MessageStore.swift */; };
-		AA0007 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0007 /* Message.swift */; };
-		AA0008 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0008 /* DiscoveryView.swift */; };
-		AA0009 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0009 /* ChatsListView.swift */; };
-		AA0010 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0010 /* ChatView.swift */; };
-		AA0011 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0011 /* SettingsView.swift */; };
-		AA0012 /* LocalNetworkTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0013 /* LocalNetworkTrigger.swift */; };
+		262241DB7520F9386274531C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE2621B30CC7B22B7D5E1E7 /* ContentView.swift */; };
+		2D2922A031853EEB1AE95F0C /* NearDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506339EFBD52E2F4D0B944F0 /* NearDropApp.swift */; };
+		C877B846562A0CB121EEA8DD /* NearDropViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F86085A7F647E3744607F1 /* NearDropViewModel.swift */; };
+		C428D3094B18C1E31DEA1D1B /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133DA524DA2B6F3D599C11CF /* Data+Extensions.swift */; };
+		259A1AF192044FF9767BC1F1 /* InboundNearbyConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0B453F232BC27CA0E4ACCD /* InboundNearbyConnection.swift */; };
+		7F22A8F2A325C9AFE5CE804C /* NearbyConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3221E20D352CE2377619B0E0 /* NearbyConnection.swift */; };
+		FC42CB906180494A4CD70C08 /* NearbyConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A924B7C275BC55A193CCC /* NearbyConnectionManager.swift */; };
+		CED45B9BCD8275FB6B703400 /* OutboundNearbyConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15609307967A25E125B0EDAA /* OutboundNearbyConnection.swift */; };
+		9C5B41891CB7D48A9ABC3008 /* SymmetricKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9094A0DB118B9FDBFE103F66 /* SymmetricKey+Extensions.swift */; };
+		E75C4B641D0A66046EBF7BB6 /* device_to_device_messages.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B251DA7308A1C9FE028999 /* device_to_device_messages.pb.swift */; };
+		6724B7A23AC56477A7BAB367 /* offline_wire_formats.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28418BFFE8E7FECBF0332849 /* offline_wire_formats.pb.swift */; };
+		055982A63C632686D3C23F96 /* securegcm.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC9FEAA844284FC73F2B23E /* securegcm.pb.swift */; };
+		895D3DD10D1F446EC6DA3E44 /* securemessage.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8539F716E0CEFCE549328 /* securemessage.pb.swift */; };
+		492C2007C1EF772F14E7B7FC /* sharing_enums.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0B0D50B551C1825B179C49 /* sharing_enums.pb.swift */; };
+		46FD9DB4C0D6CBFD8A332089 /* ukey.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E11159F56599DC738A288 /* ukey.pb.swift */; };
+		00A5D6C18F1E381EC8579CE1 /* wire_format.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B7A87D2A695978AE0BECA2 /* wire_format.pb.swift */; };
+		7C52592CFB298BEFDC580235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DB401A1FF26505D9025321 /* Assets.xcassets */; };
+		2CCB24A19F931A995B1B9CC0 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = E1BE062D49EBB6B58F60597B /* SwiftProtobuf */; };
+		A361993552B1DD9342A1D519 /* SwiftECC in Frameworks */ = {isa = PBXBuildFile; productRef = FBDB9EC5A84F4DE76387B2C9 /* SwiftECC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		21A3C2932E937E2000916E3B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		BB0001 /* NearDropApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearDropApp.swift; sourceTree = "<group>"; };
-		BB0002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BB0003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BB0004 /* CryptoKitWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKitWrapper.swift; sourceTree = "<group>"; };
-		BB0005 /* PeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerService.swift; sourceTree = "<group>"; };
-		BB0006 /* MessageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStore.swift; sourceTree = "<group>"; };
-		BB0007 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		BB0008 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
-		BB0009 /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
-		BB0010 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		BB0011 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		BB0013 /* LocalNetworkTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkTrigger.swift; sourceTree = "<group>"; };
-		BB0012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC0001 /* NearDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE2621B30CC7B22B7D5E1E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+		506339EFBD52E2F4D0B944F0 /* NearDropApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NearDropApp.swift"; sourceTree = "<group>"; };
+		D8F86085A7F647E3744607F1 /* NearDropViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NearDropViewModel.swift"; sourceTree = "<group>"; };
+		133DA524DA2B6F3D599C11CF /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		3D0B453F232BC27CA0E4ACCD /* InboundNearbyConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InboundNearbyConnection.swift"; sourceTree = "<group>"; };
+		3221E20D352CE2377619B0E0 /* NearbyConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NearbyConnection.swift"; sourceTree = "<group>"; };
+		BC5A924B7C275BC55A193CCC /* NearbyConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NearbyConnectionManager.swift"; sourceTree = "<group>"; };
+		15609307967A25E125B0EDAA /* OutboundNearbyConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OutboundNearbyConnection.swift"; sourceTree = "<group>"; };
+		9094A0DB118B9FDBFE103F66 /* SymmetricKey+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SymmetricKey+Extensions.swift"; sourceTree = "<group>"; };
+		F8B251DA7308A1C9FE028999 /* device_to_device_messages.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "device_to_device_messages.pb.swift"; sourceTree = "<group>"; };
+		28418BFFE8E7FECBF0332849 /* offline_wire_formats.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "offline_wire_formats.pb.swift"; sourceTree = "<group>"; };
+		BAC9FEAA844284FC73F2B23E /* securegcm.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "securegcm.pb.swift"; sourceTree = "<group>"; };
+		AAE8539F716E0CEFCE549328 /* securemessage.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "securemessage.pb.swift"; sourceTree = "<group>"; };
+		2E0B0D50B551C1825B179C49 /* sharing_enums.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sharing_enums.pb.swift"; sourceTree = "<group>"; };
+		DD7E11159F56599DC738A288 /* ukey.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ukey.pb.swift"; sourceTree = "<group>"; };
+		C5B7A87D2A695978AE0BECA2 /* wire_format.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "wire_format.pb.swift"; sourceTree = "<group>"; };
+		86DB401A1FF26505D9025321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AACD762DC22D4FFC888F92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C282177D29AF384F2F72524 /* NearDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD0001 /* Frameworks */ = {
+		424153ED3CD079DB4DB459AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCB24A19F931A995B1B9CC0 /* SwiftProtobuf in Frameworks */,
+				A361993552B1DD9342A1D519 /* SwiftECC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE0001 = {
+		518DA81DB9B99529C0C0AEBE = {
 			isa = PBXGroup;
 			children = (
-				EE0002 /* NearDrop/NearDrop */,
-				EE0003 /* Products */,
+				1129B6A53940C88B539F2B2B /* NearDrop */,
+				547D009064F7C3F13BEF3460 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EE0002 /* NearDrop/NearDrop */ = {
+		547D009064F7C3F13BEF3460 = {
 			isa = PBXGroup;
 			children = (
-				BB0012 /* Info.plist */,
-				BB0001 /* NearDropApp.swift */,
-				EE0004 /* Core */,
-				EE0005 /* Services */,
-				EE0006 /* Models */,
-				EE0007 /* Views */,
-				EE0008 /* Resources */,
-			);
-			path = NearDrop/NearDrop;
-			sourceTree = "<group>";
-		};
-		EE0003 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CC0001 /* NearDrop.app */,
+				0C282177D29AF384F2F72524 /* NearDrop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE0004 /* Core */ = {
+		1129B6A53940C88B539F2B2B = {
 			isa = PBXGroup;
 			children = (
-				BB0004 /* CryptoKitWrapper.swift */,
-				21A3C2932E937E2000916E3B /* Theme.swift */,
-			BB0013 /* LocalNetworkTrigger.swift */,
+				3AACD762DC22D4FFC888F92C /* Info.plist */,
+				AEE2621B30CC7B22B7D5E1E7 /* ContentView.swift */,
+				506339EFBD52E2F4D0B944F0 /* NearDropApp.swift */,
+				D8F86085A7F647E3744607F1 /* NearDropViewModel.swift */,
+				133DA524DA2B6F3D599C11CF /* Data+Extensions.swift */,
+				3D0B453F232BC27CA0E4ACCD /* InboundNearbyConnection.swift */,
+				3221E20D352CE2377619B0E0 /* NearbyConnection.swift */,
+				BC5A924B7C275BC55A193CCC /* NearbyConnectionManager.swift */,
+				15609307967A25E125B0EDAA /* OutboundNearbyConnection.swift */,
+				9094A0DB118B9FDBFE103F66 /* SymmetricKey+Extensions.swift */,
+				F8B251DA7308A1C9FE028999 /* device_to_device_messages.pb.swift */,
+				28418BFFE8E7FECBF0332849 /* offline_wire_formats.pb.swift */,
+				BAC9FEAA844284FC73F2B23E /* securegcm.pb.swift */,
+				AAE8539F716E0CEFCE549328 /* securemessage.pb.swift */,
+				2E0B0D50B551C1825B179C49 /* sharing_enums.pb.swift */,
+				DD7E11159F56599DC738A288 /* ukey.pb.swift */,
+				C5B7A87D2A695978AE0BECA2 /* wire_format.pb.swift */,
+				86DB401A1FF26505D9025321 /* Assets.xcassets */,
 			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		EE0005 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				BB0005 /* PeerService.swift */,
-				BB0006 /* MessageStore.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		EE0006 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BB0007 /* Message.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		EE0007 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BB0002 /* ContentView.swift */,
-				BB0008 /* DiscoveryView.swift */,
-				BB0009 /* ChatsListView.swift */,
-				BB0010 /* ChatView.swift */,
-				BB0011 /* SettingsView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		EE0008 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BB0003 /* Assets.xcassets */,
-			);
-			path = Resources;
+			path = NearDrop/NearDrop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FF0001 /* NearDrop */ = {
+		4F9F2229FD4DF231C2715978 /* NearDrop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF0002 /* Build configuration list for PBXNativeTarget "NearDrop" */;
+			buildConfigurationList = D9DFD7DBAC89D25E4B2CAE9F /* Build configuration list for PBXNativeTarget "NearDrop" */;
 			buildPhases = (
-				FF0003 /* Sources */,
-				DD0001 /* Frameworks */,
-				FF0004 /* Resources */,
+				7A70D71C385290AF96BF1031 /* Sources */,
+				424153ED3CD079DB4DB459AF /* Frameworks */,
+				285BB1C1430063331E9F5DD0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NearDrop;
+			packageProductDependencies = (
+				E1BE062D49EBB6B58F60597B /* SwiftProtobuf */,
+				FBDB9EC5A84F4DE76387B2C9 /* SwiftECC */,
+			);
 			productName = NearDrop;
-			productReference = CC0001 /* NearDrop.app */;
+			productReference = 0C282177D29AF384F2F72524 /* NearDrop.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		GG0001 /* Project object */ = {
+		3875FCA3B3A455B74C8BB869 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1620;
-				TargetAttributes = {
-					FF0001 = {
-						CreatedOnToolsVersion = 16.2;
-					};
-				};
 			};
-			buildConfigurationList = GG0002 /* Build configuration list for PBXProject "NearDrop" */;
+			buildConfigurationList = B2EA91D03AD1C6A649B4E62A /* Build configuration list for PBXProject "NearDrop" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -171,89 +146,71 @@
 				en,
 				Base,
 			);
-			mainGroup = EE0001;
-			productRefGroup = EE0003 /* Products */;
+			mainGroup = 518DA81DB9B99529C0C0AEBE;
+			packageReferences = (
+				0CE631FF24CBDB32D114EA42 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+				13BCD55D678D7C52A493E6A1 /* XCRemoteSwiftPackageReference "SwiftECC" */,
+			);
+			productRefGroup = 547D009064F7C3F13BEF3460 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF0001 /* NearDrop */,
+				4F9F2229FD4DF231C2715978 /* NearDrop */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FF0004 /* Resources */ = {
+		285BB1C1430063331E9F5DD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0003 /* Assets.xcassets in Resources */,
+				7C52592CFB298BEFDC580235 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF0003 /* Sources */ = {
+		7A70D71C385290AF96BF1031 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0001 /* NearDropApp.swift in Sources */,
-				AA0002 /* ContentView.swift in Sources */,
-				AA0004 /* CryptoKitWrapper.swift in Sources */,
-				AA0005 /* PeerService.swift in Sources */,
-				21A3C2942E937E2000916E3B /* Theme.swift in Sources */,
-				AA0006 /* MessageStore.swift in Sources */,
-				AA0007 /* Message.swift in Sources */,
-				AA0008 /* DiscoveryView.swift in Sources */,
-				AA0009 /* ChatsListView.swift in Sources */,
-				AA0010 /* ChatView.swift in Sources */,
-				AA0011 /* SettingsView.swift in Sources */,
-			AA0012 /* LocalNetworkTrigger.swift in Sources */,
+				262241DB7520F9386274531C /* ContentView.swift in Sources */,
+				2D2922A031853EEB1AE95F0C /* NearDropApp.swift in Sources */,
+				C877B846562A0CB121EEA8DD /* NearDropViewModel.swift in Sources */,
+				C428D3094B18C1E31DEA1D1B /* Data+Extensions.swift in Sources */,
+				259A1AF192044FF9767BC1F1 /* InboundNearbyConnection.swift in Sources */,
+				7F22A8F2A325C9AFE5CE804C /* NearbyConnection.swift in Sources */,
+				FC42CB906180494A4CD70C08 /* NearbyConnectionManager.swift in Sources */,
+				CED45B9BCD8275FB6B703400 /* OutboundNearbyConnection.swift in Sources */,
+				9C5B41891CB7D48A9ABC3008 /* SymmetricKey+Extensions.swift in Sources */,
+				E75C4B641D0A66046EBF7BB6 /* device_to_device_messages.pb.swift in Sources */,
+				6724B7A23AC56477A7BAB367 /* offline_wire_formats.pb.swift in Sources */,
+				055982A63C632686D3C23F96 /* securegcm.pb.swift in Sources */,
+				895D3DD10D1F446EC6DA3E44 /* securemessage.pb.swift in Sources */,
+				492C2007C1EF772F14E7B7FC /* sharing_enums.pb.swift in Sources */,
+				46FD9DB4C0D6CBFD8A332089 /* ukey.pb.swift in Sources */,
+				00A5D6C18F1E381EC8579CE1 /* wire_format.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		HH0001 /* Debug */ = {
+		E6178B066263F09B11493064 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -261,16 +218,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -278,70 +228,35 @@
 			};
 			name = Debug;
 		};
-		HH0002 /* Release */ = {
+		ABEC029BF262CCD804B9BF2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		HH0003 /* Debug */ = {
+		A42EC390825805C572555766 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 75A5D8XP3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NearDrop/NearDrop/Info.plist;
@@ -349,7 +264,6 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,21 +273,19 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		HH0004 /* Release */ = {
+		7EBBE04C0C4111FDA48CD811 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 75A5D8XP3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NearDrop/NearDrop/Info.plist;
@@ -381,7 +293,6 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,7 +302,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,25 +311,58 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF0002 /* Build configuration list for PBXNativeTarget "NearDrop" */ = {
+		D9DFD7DBAC89D25E4B2CAE9F /* Build configuration list for PBXNativeTarget "NearDrop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				HH0003 /* Debug */,
-				HH0004 /* Release */,
+				A42EC390825805C572555766 /* Debug */,
+				7EBBE04C0C4111FDA48CD811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		GG0002 /* Build configuration list for PBXProject "NearDrop" */ = {
+		B2EA91D03AD1C6A649B4E62A /* Build configuration list for PBXProject "NearDrop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				HH0001 /* Debug */,
-				HH0002 /* Release */,
+				E6178B066263F09B11493064 /* Debug */,
+				ABEC029BF262CCD804B9BF2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0CE631FF24CBDB32D114EA42 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.21.0;
+			};
+		};
+		13BCD55D678D7C52A493E6A1 /* XCRemoteSwiftPackageReference "SwiftECC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leif-ibsen/SwiftECC";
+			requirement = {
+				kind = exactVersion;
+				version = 3.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1BE062D49EBB6B58F60597B /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CE631FF24CBDB32D114EA42 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		FBDB9EC5A84F4DE76387B2C9 /* SwiftECC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13BCD55D678D7C52A493E6A1 /* XCRemoteSwiftPackageReference "SwiftECC" */;
+			productName = SwiftECC;
+		};
+/* End XCSwiftPackageProductDependency section */
+
 	};
-	rootObject = GG0001 /* Project object */;
+	rootObject = 3875FCA3B3A455B74C8BB869 /* Project object */;
 }
