@@ -34,8 +34,12 @@ class PeerService: NSObject, ObservableObject {
         self.identityKeys = CryptoKitWrapper.generateIdentityKeys()
         self.sessionKeys = CryptoKitWrapper.generateSessionKeys()
 
-        // Create peer ID with device name
-        let deviceName = UIDevice.current.name
+        // Create peer ID with a unique, stable display name.
+        // iOS 16+ may return a generic name from UIDevice.current.name,
+        // so we append a short hash to keep peers distinguishable.
+        let baseName = UIDevice.current.name
+        let shortHash = String(UUID().uuidString.prefix(4).uppercased())
+        let deviceName = "\(baseName)-\(shortHash)"
         self.peerID = MCPeerID(displayName: deviceName)
 
         // Create session

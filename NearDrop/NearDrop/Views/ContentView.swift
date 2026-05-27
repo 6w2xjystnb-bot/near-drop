@@ -5,26 +5,23 @@ struct ContentView: View {
     @State private var selectedTab = 0
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            // Main content
-            TabView(selection: $selectedTab) {
-                DiscoveryView()
-                    .tag(0)
+        TabView(selection: $selectedTab) {
+            DiscoveryView()
+                .tag(0)
 
-                NavigationView {
-                    ChatsListView()
-                }
-                .tag(1)
-
-                SettingsView()
-                    .tag(2)
+            NavigationView {
+                ChatsListView()
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
+            .tag(1)
 
-            // Custom Tab Bar
-            ModernTabBar(selectedTab: $selectedTab, peerService: peerService)
+            SettingsView()
+                .tag(2)
         }
-        .ignoresSafeArea(edges: .bottom)
+        .tabViewStyle(.page(indexDisplayMode: .never))
+        .safeAreaInset(edge: .bottom) {
+            ModernTabBar(selectedTab: $selectedTab, peerService: peerService)
+                .padding(.bottom, 4)
+        }
     }
 }
 
@@ -79,7 +76,6 @@ struct ModernTabBar: View {
         .cornerRadius(Theme.CornerRadius.lg)
         .shadow(color: Color.black.opacity(0.5), radius: 20, y: -5)
         .padding(.horizontal, Theme.Spacing.md)
-        .padding(.bottom, Theme.Spacing.sm)
     }
 }
 
