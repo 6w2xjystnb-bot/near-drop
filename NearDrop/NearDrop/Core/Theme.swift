@@ -22,6 +22,7 @@ struct Theme {
 
         static let primary = Color(red: 0.0, green: 0.48, blue: 1.0)
         static let primaryLight = Color(red: 0.4, green: 0.7, blue: 1.0)
+        static let secondary = Color(red: 0.3, green: 0.6, blue: 1.0)
 
         static let success = Color(red: 0.2, green: 0.78, blue: 0.35)
         static let warning = Color(red: 1.0, green: 0.58, blue: 0.0)
