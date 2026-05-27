@@ -1,22 +1,19 @@
 import Foundation
-import Network
+import MultipeerConnectivity
 
 /// Triggers the iOS Local Network Privacy permission dialog on first launch.
-/// MultipeerConnectivity's Bonjour usage alone may delay the prompt until
-/// browsing/advertising starts. This helper forces the system alert early.
+/// Uses MCNearbyServiceBrowser because it is the most reliable way to force
+/// the system alert — MultipeerConnectivity is what the app actually needs.
 struct LocalNetworkTrigger {
     static func requestPermission() {
-        // NWBrowser with Bonjour will trigger the local-network alert
-        let browser = NWBrowser(for: .bonjour(type: "_neardrop._tcp", domain: nil), using: .tcp)
-        browser.stateUpdateHandler = { state in
-            if case .failed = state {
-                browser.cancel()
-            }
-        }
-        browser.start(queue: .main)
-        // Cancel after a short delay — we only need the prompt, not actual browsing
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            browser.cancel()
+        let peerID = MCPeerID(displayName: "trigger-\(UUID().uuidString.prefix(4))")
+        let browser = MCNearbyServiceBrowser(peer: peerID, serviceType: "neardrop")
+        browser.startBrowsingForPeers()
+
+        // Keep browsing alive long enough for the OS to present the alert.
+        // Cancelling too early can suppress the dialog.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+            browser.stopBrowsingForPeers()
         }
     }
 }

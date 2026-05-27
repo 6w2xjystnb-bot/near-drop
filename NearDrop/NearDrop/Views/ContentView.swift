@@ -20,7 +20,7 @@ struct ContentView: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
         .safeAreaInset(edge: .bottom) {
             ModernTabBar(selectedTab: $selectedTab, peerService: peerService)
-                .padding(.bottom, 4)
+                .padding(.bottom, 8)
         }
     }
 }
@@ -74,7 +74,7 @@ struct ModernTabBar: View {
                 )
         )
         .cornerRadius(Theme.CornerRadius.lg)
-        .shadow(color: Color.black.opacity(0.5), radius: 20, y: -5)
+        .shadow(color: Color.black.opacity(0.08), radius: 8, y: -2)
         .padding(.horizontal, Theme.Spacing.md)
     }
 }

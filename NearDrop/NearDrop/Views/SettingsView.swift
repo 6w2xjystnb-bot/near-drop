@@ -26,7 +26,7 @@ struct SettingsView: View {
                         Spacer()
                     }
                     .padding(.horizontal, Theme.Spacing.lg)
-                    .padding(.top, Theme.Spacing.lg)
+                    .padding(.top, Theme.Spacing.xl)
 
                     // Device Section
                     VStack(spacing: Theme.Spacing.md) {

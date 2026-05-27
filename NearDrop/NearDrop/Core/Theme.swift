@@ -47,7 +47,7 @@ struct Theme {
 
     struct Typography {
         static var largeTitle: Font {
-            isSmallDevice ? .system(size: 24, weight: .bold) : .system(size: 26, weight: .bold)
+            isSmallDevice ? .system(size: 22, weight: .bold) : .system(size: 24, weight: .bold)
         }
         static var title: Font {
             isSmallDevice ? .system(size: 18, weight: .bold) : .system(size: 20, weight: .bold)
@@ -89,11 +89,11 @@ struct Theme {
     struct Sizes {
         static var avatarSmall: CGFloat { isSmallDevice ? 40 : 44 }
         static var avatarMedium: CGFloat { isSmallDevice ? 48 : 56 }
-        static var avatarLarge: CGFloat { isSmallDevice ? 70 : 80 }
+        static var avatarLarge: CGFloat { isSmallDevice ? 56 : 64 }
 
         static var iconSmall: CGFloat { isSmallDevice ? 16 : 18 }
         static var iconMedium: CGFloat { isSmallDevice ? 28 : 32 }
-        static var iconLarge: CGFloat { isSmallDevice ? 44 : 50 }
+        static var iconLarge: CGFloat { isSmallDevice ? 36 : 42 }
 
         static var buttonHeight: CGFloat { isSmallDevice ? 44 : 48 }
     }

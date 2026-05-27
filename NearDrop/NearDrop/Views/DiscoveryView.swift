@@ -34,7 +34,7 @@ struct DiscoveryView: View {
                     }
                 }
                 .padding(.horizontal, Theme.Spacing.lg)
-                .padding(.top, Theme.Spacing.sm)
+                .padding(.top, Theme.Spacing.xl)
                 .padding(.bottom, Theme.Spacing.sm)
 
                 ScrollView(showsIndicators: false) {
@@ -51,10 +51,10 @@ struct DiscoveryView: View {
                                             startPoint: .topLeading,
                                             endPoint: .bottomTrailing
                                         ))
-                                        .frame(width: Theme.Sizes.avatarLarge, height: Theme.Sizes.avatarLarge)
+                                        .frame(width: Theme.Sizes.iconLarge, height: Theme.Sizes.iconLarge)
 
                                     Image(systemName: "antenna.radiowaves.left.and.right")
-                                        .font(.system(size: Theme.Sizes.iconMedium))
+                                        .font(.system(size: Theme.Sizes.iconSmall))
                                         .foregroundColor(.white)
                                 }
 
