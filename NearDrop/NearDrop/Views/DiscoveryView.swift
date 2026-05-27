@@ -8,13 +8,12 @@ struct DiscoveryView: View {
     var body: some View {
         ZStack {
             Theme.Colors.background
-                .ignoresSafeArea()
+                .ignoresSafeArea(edges: .horizontal)
 
             VStack(spacing: 0) {
-                // Compact header
                 HStack {
                     Text("Discover")
-                        .font(Theme.Typography.largeTitle)
+                        .font(Theme.Typography.title)
                         .foregroundColor(Theme.Colors.textPrimary)
 
                     Spacer()
@@ -34,15 +33,13 @@ struct DiscoveryView: View {
                     }
                 }
                 .padding(.horizontal, Theme.Spacing.lg)
-                .padding(.top, Theme.Spacing.xl)
-                .padding(.bottom, Theme.Spacing.sm)
+                .padding(.vertical, Theme.Spacing.md)
 
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: Theme.Spacing.md) {
                         if !isDiscovering {
-                            // Compact onboarding
                             VStack(spacing: Theme.Spacing.lg) {
-                                Spacer()
+                                Spacer(minLength: 40)
 
                                 ZStack {
                                     Circle()
@@ -51,16 +48,16 @@ struct DiscoveryView: View {
                                             startPoint: .topLeading,
                                             endPoint: .bottomTrailing
                                         ))
-                                        .frame(width: Theme.Sizes.iconLarge, height: Theme.Sizes.iconLarge)
+                                        .frame(width: 72, height: 72)
 
                                     Image(systemName: "antenna.radiowaves.left.and.right")
-                                        .font(.system(size: Theme.Sizes.iconSmall))
+                                        .font(.system(size: 28))
                                         .foregroundColor(.white)
                                 }
 
                                 VStack(spacing: 6) {
                                     Text("Find Nearby Devices")
-                                        .font(Theme.Typography.title)
+                                        .font(Theme.Typography.title2)
                                         .foregroundColor(Theme.Colors.textPrimary)
 
                                     Text("Connect securely with people around you")
@@ -69,14 +66,13 @@ struct DiscoveryView: View {
                                         .multilineTextAlignment(.center)
                                 }
 
-                                Spacer()
+                                Spacer(minLength: 40)
                             }
                             .frame(maxWidth: .infinity)
-                            .padding(.vertical, Theme.Spacing.xxl)
+                            .padding(.vertical, Theme.Spacing.xl)
                         } else if peerService.discoveredPeers.isEmpty {
-                            // Compact scanning state
                             VStack(spacing: Theme.Spacing.lg) {
-                                Spacer()
+                                Spacer(minLength: 40)
 
                                 ProgressView()
                                     .padding(.bottom, Theme.Spacing.md)
@@ -90,13 +86,12 @@ struct DiscoveryView: View {
                                     .foregroundColor(Theme.Colors.textSecondary)
                                     .multilineTextAlignment(.center)
 
-                                Spacer()
+                                Spacer(minLength: 40)
                             }
                             .frame(maxWidth: .infinity)
-                            .padding(.vertical, Theme.Spacing.xxl)
+                            .padding(.vertical, Theme.Spacing.xl)
                             .padding(.horizontal, Theme.Spacing.xl)
                         } else {
-                            // Devices list
                             ForEach(peerService.discoveredPeers, id: \.self) { peer in
                                 PeerRow(peer: peer)
                             }
@@ -105,7 +100,6 @@ struct DiscoveryView: View {
                     .padding(.horizontal, Theme.Spacing.lg)
                 }
 
-                // Compact bottom button
                 VStack(spacing: 0) {
                     Divider()
 
@@ -137,7 +131,6 @@ struct PeerRow: View {
 
     var body: some View {
         HStack(spacing: Theme.Spacing.md) {
-            // Compact avatar
             ZStack {
                 Circle()
                     .fill(LinearGradient(
@@ -152,7 +145,6 @@ struct PeerRow: View {
                     .foregroundColor(.white)
             }
 
-            // Compact info
             VStack(alignment: .leading, spacing: 2) {
                 Text(peer.displayName)
                     .font(Theme.Typography.headline)
@@ -171,7 +163,6 @@ struct PeerRow: View {
 
             Spacer()
 
-            // Compact action
             if !isConnected {
                 Button(action: { peerService.invitePeer(peer) }) {
                     Text("Connect")

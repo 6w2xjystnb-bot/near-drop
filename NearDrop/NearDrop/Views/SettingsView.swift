@@ -6,7 +6,7 @@ struct SettingsView: View {
     var body: some View {
         ZStack {
             Theme.Colors.background
-                .ignoresSafeArea()
+                .ignoresSafeArea(edges: .horizontal)
 
             ScrollView {
                 VStack(spacing: Theme.Spacing.lg) {
@@ -66,6 +66,45 @@ struct SettingsView: View {
                                 Spacer()
                             }
                             .padding(Theme.Spacing.md)
+
+                            Divider()
+                                .background(Theme.Colors.textTertiary.opacity(0.2))
+                                .padding(.leading, 60)
+
+                            Button(action: {
+                                if let url = URL(string: UIApplication.openSettingsURLString) {
+                                    UIApplication.shared.open(url)
+                                }
+                            }) {
+                                HStack(spacing: Theme.Spacing.md) {
+                                    ZStack {
+                                        Circle()
+                                            .fill(Theme.Colors.warning.opacity(0.2))
+                                            .frame(width: 40, height: 40)
+
+                                        Image(systemName: "network")
+                                            .font(.system(size: 20))
+                                            .foregroundColor(Theme.Colors.warning)
+                                    }
+
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("Local Network")
+                                            .font(Theme.Typography.subheadline)
+                                            .foregroundColor(Theme.Colors.textPrimary)
+
+                                        Text("Tap to open Settings")
+                                            .font(Theme.Typography.caption)
+                                            .foregroundColor(Theme.Colors.textSecondary)
+                                    }
+
+                                    Spacer()
+
+                                    Image(systemName: "chevron.right")
+                                        .font(.system(size: 12, weight: .semibold))
+                                        .foregroundColor(Theme.Colors.textTertiary)
+                                }
+                                .padding(Theme.Spacing.md)
+                            }
                         }
                         .cardStyle()
                     }

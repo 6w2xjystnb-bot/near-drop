@@ -5,106 +5,109 @@ struct ContentView: View {
     @State private var selectedTab = 0
 
     var body: some View {
-        TabView(selection: $selectedTab) {
-            DiscoveryView()
-                .tag(0)
-
-            NavigationView {
-                ChatsListView()
+        VStack(spacing: 0) {
+            Group {
+                switch selectedTab {
+                case 0:
+                    DiscoveryView()
+                case 1:
+                    NavigationView {
+                        ChatsListView()
+                    }
+                case 2:
+                    SettingsView()
+                default:
+                    EmptyView()
+                }
             }
-            .tag(1)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-            SettingsView()
-                .tag(2)
+            TabBar(selectedTab: $selectedTab, peerService: peerService)
         }
-        .tabViewStyle(.page(indexDisplayMode: .never))
-        .safeAreaInset(edge: .bottom) {
-            ModernTabBar(selectedTab: $selectedTab, peerService: peerService)
-                .padding(.bottom, 8)
+        .onAppear {
+            // Trigger permission after the window is fully ready.
+            // init() is too early and can suppress the system dialog.
+            LocalNetworkTrigger.requestPermission()
         }
     }
 }
 
-struct ModernTabBar: View {
+struct TabBar: View {
     @Binding var selectedTab: Int
     @ObservedObject var peerService: PeerService
 
     var body: some View {
         HStack(spacing: 0) {
-            // Discovery Tab
             TabBarButton(
                 icon: "antenna.radiowaves.left.and.right",
-                title: "SCAN",
-                isSelected: selectedTab == 0,
-                action: { selectedTab = 0 }
+                label: "Scan",
+                tag: 0,
+                selectedTab: $selectedTab
             )
 
-            // Messages Tab
-            ZStack(alignment: .topTrailing) {
-                TabBarButton(
-                    icon: "message.fill",
-                    title: "MSGS",
-                    isSelected: selectedTab == 1,
-                    action: { selectedTab = 1 }
-                )
+            TabBarButton(
+                icon: "message.fill",
+                label: "Msgs",
+                tag: 1,
+                selectedTab: $selectedTab,
+                badge: peerService.connectedPeers.isEmpty ? nil : peerService.connectedPeers.count
+            )
 
-                // Badge for connected peers
-                if !peerService.connectedPeers.isEmpty {
-                    Circle()
-                        .fill(Theme.Colors.primary)
-                        .frame(width: 8, height: 8)
-                        .offset(x: 8, y: 12)
-                }
-            }
-
-            // Settings Tab
             TabBarButton(
                 icon: "gearshape.fill",
-                title: "SYS",
-                isSelected: selectedTab == 2,
-                action: { selectedTab = 2 }
+                label: "Sys",
+                tag: 2,
+                selectedTab: $selectedTab
             )
         }
-        .padding(.horizontal, Theme.Spacing.lg)
-        .padding(.vertical, Theme.Spacing.sm)
+        .padding(.top, 6)
+        .padding(.bottom, max(6, 0))
         .background(
             Theme.Colors.surface
                 .overlay(
-                    Theme.Colors.primary.opacity(0.05)
+                    Rectangle()
+                        .fill(Theme.Colors.divider)
+                        .frame(height: 0.5)
+                        .frame(maxHeight: .infinity, alignment: .top)
                 )
         )
-        .cornerRadius(Theme.CornerRadius.lg)
-        .shadow(color: Color.black.opacity(0.08), radius: 8, y: -2)
-        .padding(.horizontal, Theme.Spacing.md)
     }
 }
 
 struct TabBarButton: View {
     let icon: String
-    let title: String
-    let isSelected: Bool
-    let action: () -> Void
+    let label: String
+    let tag: Int
+    @Binding var selectedTab: Int
+    var badge: Int? = nil
+
+    var isSelected: Bool { selectedTab == tag }
 
     var body: some View {
-        Button(action: action) {
-            VStack(spacing: 6) {
-                Image(systemName: icon)
-                    .font(.system(size: 22))
-                    .foregroundColor(isSelected ? Theme.Colors.primary : Theme.Colors.textTertiary)
+        Button(action: { selectedTab = tag }) {
+            VStack(spacing: 2) {
+                ZStack(alignment: .topTrailing) {
+                    Image(systemName: icon)
+                        .font(.system(size: 20, weight: isSelected ? .semibold : .regular))
+                        .foregroundColor(isSelected ? Theme.Colors.primary : Theme.Colors.textTertiary)
 
-                Text(title)
-                    .font(Theme.Typography.caption2)
+                    if let badge, badge > 0 {
+                        Text("\(badge)")
+                            .font(.system(size: 10, weight: .bold))
+                            .foregroundColor(.white)
+                            .frame(minWidth: 14, minHeight: 14)
+                            .background(Theme.Colors.danger)
+                            .clipShape(Capsule())
+                            .offset(x: 8, y: -6)
+                    }
+                }
+
+                Text(label)
+                    .font(.system(size: 10, weight: isSelected ? .semibold : .medium))
                     .foregroundColor(isSelected ? Theme.Colors.primary : Theme.Colors.textTertiary)
-                    .tracking(1)
             }
             .frame(maxWidth: .infinity)
-            .padding(.vertical, Theme.Spacing.sm)
-            .background(
-                isSelected ?
-                Theme.Colors.primary.opacity(0.15) :
-                Color.clear
-            )
-            .cornerRadius(Theme.CornerRadius.sm)
+            .padding(.vertical, 4)
         }
     }
 }
