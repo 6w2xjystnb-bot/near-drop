@@ -1,0 +1,61 @@
+name: Build Unsigned IPA for Sideloading
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+env:
+  PROJECT_PATH: NearDrop.xcodeproj
+  SCHEME: NearDrop
+
+jobs:
+  build-unsigned-ipa:
+    name: Build Unsigned IPA
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode 16.2
+        run: sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer
+
+      - name: Show build environment
+        run: |
+          xcodebuild -version
+          xcodebuild -list -project "${{ env.PROJECT_PATH }}"
+
+      - name: Build for iOS (no code signing)
+        run: |
+          xcodebuild clean build \
+            -project "${{ env.PROJECT_PATH }}" \
+            -scheme "${{ env.SCHEME }}" \
+            -destination "generic/platform=iOS" \
+            -derivedDataPath DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            EXPANDED_CODE_SIGN_IDENTITY="" \
+            OTHER_CODE_SIGN_FLAGS=""
+
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH=$(find DerivedData -name "${{ env.SCHEME }}.app" -type d | head -n 1)
+          if [ -z "$APP_PATH" ]; then
+            echo "Error: Could not find built .app"
+            find DerivedData -type d -name "*.app"
+            exit 1
+          fi
+          echo "Found app: $APP_PATH"
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -r9 NearDrop-Unsigned.ipa Payload
+          rm -rf Payload
+          ls -lh NearDrop-Unsigned.ipa
+
+      - name: Upload Unsigned IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: NearDrop-Unsigned-IPA
+          path: NearDrop-Unsigned.ipa
+          retention-days: 14
