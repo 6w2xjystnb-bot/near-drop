@@ -52,7 +52,6 @@
 		EE0001 = {
 			isa = PBXGroup;
 			children = (
-				21A3C2932E937E2000916E3B /* Theme.swift */,
 				EE0002 /* NearDrop/NearDrop */,
 				EE0003 /* Products */,
 			);
@@ -84,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				BB0004 /* CryptoKitWrapper.swift */,
+				21A3C2932E937E2000916E3B /* Theme.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
