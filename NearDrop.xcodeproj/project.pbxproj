@@ -45,7 +45,7 @@
 		2E0B0D50B551C1825B179C49 /* sharing_enums.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NearbyShare/Protobuf/sharing_enums.pb.swift"; sourceTree = "<group>"; };
 		DD7E11159F56599DC738A288 /* ukey.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NearbyShare/Protobuf/ukey.pb.swift"; sourceTree = "<group>"; };
 		C5B7A87D2A695978AE0BECA2 /* wire_format.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NearbyShare/Protobuf/wire_format.pb.swift"; sourceTree = "<group>"; };
-		86DB401A1FF26505D9025321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86DB401A1FF26505D9025321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		3AACD762DC22D4FFC888F92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C282177D29AF384F2F72524 /* NearDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
